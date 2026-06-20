@@ -1,0 +1,60 @@
+<div class="login-container">
+  <div class="login-card">
+    <h2>Academic Portal</h2>
+    <p class="subtitle">{{ isSignUpMode ? 'Create a Student Account' : 'Student Operations Sign-In' }}</p>
+
+    <form [formGroup]="loginForm" (ngSubmit)="handleSubmit()">
+      
+      <div class="form-group" *ngIf="isSignUpMode">
+        <label>First Name</label>
+        <input type="text" formControlName="firstName" placeholder="Enter first name" />
+        <div class="error-text" *ngIf="loginForm.get('firstName')?.touched && loginForm.get('firstName')?.invalid">
+          First name is required.
+        </div>
+      </div>
+
+      <div class="form-group" *ngIf="isSignUpMode">
+        <label>Last Name</label>
+        <input type="text" formControlName="lastName" placeholder="Enter last name" />
+        <div class="error-text" *ngIf="loginForm.get('lastName')?.touched && loginForm.get('lastName')?.invalid">
+          Last name is required.
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label>Email Address</label>
+        <input type="email" formControlName="email" placeholder="name@college.edu" />
+        <div class="error-text" *ngIf="loginForm.get('email')?.touched && loginForm.get('email')?.invalid">
+          Please enter a valid email address.
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label>Password</label>
+        <input type="password" formControlName="password" placeholder="••••••••" />
+        <div class="error-text" *ngIf="loginForm.get('password')?.touched && loginForm.get('password')?.invalid">
+          Password parameters are required.
+        </div>
+      </div>
+
+      <button type="submit" class="submit-btn" [disabled]="loginForm.invalid || isSubmitting">
+        {{ isSubmitting ? 'Processing...' : (isSignUpMode ? 'Register Student' : 'Sign In') }}
+      </button>
+
+      <p style="text-align: center; font-size: 14px; margin-top: 20px; color: #4a5568;">
+        {{ isSignUpMode ? 'Already have an account?' : "Don't have an account?" }}
+        <a href="javascript:void(0)" (click)="toggleMode()" style="color: #4318ff; font-weight: 600; text-decoration: none;">
+          {{ isSignUpMode ? 'Login here' : 'Sign up here' }}
+        </a>
+      </p>
+
+      <div class="alert-box alert-success" *ngIf="successMessage">
+        {{ successMessage }}
+      </div>
+      <div class="alert-box alert-error" *ngIf="errorMessage">
+        {{ errorMessage }}
+      </div>
+
+    </form>
+  </div>
+</div>

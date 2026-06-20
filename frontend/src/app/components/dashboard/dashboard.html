@@ -1,0 +1,28 @@
+<div class="dashboard-wrapper">
+  <header>
+    <h2>🎓 Student Administration Portal</h2>
+    <button class="logout-btn" (click)="handleLogout()">Logout</button>
+  </header>
+
+  <div class="metrics-grid">
+    <div class="card card-registered">
+      <h4>Total Registered Students</h4>
+      <p>{{ studentCount }}</p>
+    </div>
+    
+    <div class="card card-database">
+      <h4>Active Database Connections</h4>
+      <p>MongoDB Connected</p>
+    </div>
+    
+    <div class="card card-api">
+      <h4>API Gateway Status</h4>
+      <p>REST Live (200 OK)</p>
+    </div>
+  </div>
+
+  <div class="log-box">
+    <h3>System Operational Log</h3>
+    <p>This portal communicates dynamically with your Node.js backend to perform secure data transformations using your Mongoose validation architecture.</p>
+  </div>
+</div>

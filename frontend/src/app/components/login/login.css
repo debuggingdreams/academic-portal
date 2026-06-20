@@ -1,0 +1,127 @@
+/* login.css */
+
+/* Center the form perfectly on the screen background */
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+/* Glassmorphism Card Design */
+.login-card {
+  background: #ffffff;
+  padding: 40px;
+  border-radius: 16px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05), 0 20px 48px rgba(0, 0, 0, 0.05);
+  width: 100%;
+  max-width: 420px;
+  box-sizing: border-box;
+}
+
+/* Portfolio Professional Heading */
+.login-card h2 {
+  margin: 0 0 8px 0;
+  color: #1a202c;
+  font-size: 28px;
+  font-weight: 700;
+  text-align: center;
+}
+
+.login-card p.subtitle {
+  color: #718096;
+  text-align: center;
+  margin: 0 0 32px 0;
+  font-size: 14px;
+}
+
+/* Form layout wrappers */
+.form-group {
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 8px;
+  color: #4a5568;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+/* Premium Input Box Transitions */
+.form-group input {
+  width: 100%;
+  padding: 12px 16px;
+  border: 1.5px solid #e2e8f0;
+  border-radius: 8px;
+  font-size: 15px;
+  color: #2d3748;
+  background-color: #fff;
+  box-sizing: border-box;
+  transition: all 0.2s ease-in-out;
+}
+
+.form-group input:focus {
+  outline: none;
+  border-color: #4318ff;
+  box-shadow: 0 0 0 4px rgba(67, 24, 255, 0.1);
+}
+
+/* Field Validation Error Styling */
+.error-text {
+  color: #e53e3e;
+  font-size: 12px;
+  margin-top: 6px;
+  font-weight: 500;
+}
+
+/* Modern Action Button */
+.submit-btn {
+  width: 100%;
+  padding: 14px;
+  background-color: #4318ff;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  margin-top: 10px;
+}
+
+.submit-btn:hover {
+  background-color: #3311cc;
+  box-shadow: 0 4px 12px rgba(67, 24, 255, 0.25);
+}
+
+.submit-btn:disabled {
+  background-color: #a0aec0;
+  cursor: not-allowed;
+  box-shadow: none;
+}
+
+/* Global Notification Banners */
+.alert-box {
+  padding: 12px;
+  border-radius: 8px;
+  margin-top: 20px;
+  font-size: 14px;
+  text-align: center;
+  font-weight: 500;
+}
+
+.alert-success {
+  background-color: #c6f6d5;
+  color: #22543d;
+}
+
+.alert-error {
+  background-color: #fed7d7;
+  color: #742a2a;
+}
